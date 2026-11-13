@@ -82,6 +82,7 @@ a2a = [
 ]
 
 cedar = ["cedarpy==4.12.2", "cedar-policy-mcp-schema-generator==0.7.0"]
+llamafirewall = ["llamafirewall>=1.0.3,<2.0.0"]
 
 bidi = [
     "aws_sdk_bedrock_runtime[awscrt]>=0.11.0,<0.12.0; python_version>='3.12'",
@@ -272,6 +273,7 @@ follow_imports = "skip"
 module = [
     "aws_sdk_bedrock_runtime.*",
     "cedarpy",
+    "llamafirewall",
     "cedar_mcp_schema_generator",
     "smithy_aws_core.*",
     "smithy_core.*",

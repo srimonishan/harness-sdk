@@ -5,7 +5,7 @@ Ready-to-use InterventionHandler implementations for common control patterns.
 
 from .hitl import HumanInTheLoop
 
-__all__ = ["CedarAuthorization", "HumanInTheLoop"]
+__all__ = ["CedarAuthorization", "HumanInTheLoop", "LlamaFirewallGuard"]
 
 
 def __getattr__(name: str) -> type:
@@ -13,4 +13,8 @@ def __getattr__(name: str) -> type:
         from .cedar import CedarAuthorization
 
         return CedarAuthorization
+    if name == "LlamaFirewallGuard":
+        from .llama_firewall import LlamaFirewallGuard
+
+        return LlamaFirewallGuard
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
